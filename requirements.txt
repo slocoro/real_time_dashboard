@@ -1,0 +1,5 @@
+confluent-kafka
+streamlit
+pinotdb
+plotly
+pandas
