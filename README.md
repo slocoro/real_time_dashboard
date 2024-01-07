@@ -1,4 +1,4 @@
-A simple tutorial real-time dashboard using Kafka and Pinot.
+A simple real-time dashboard tutorial using Kafka and Pinot.
 
 To Run
 
