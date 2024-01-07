@@ -39,10 +39,15 @@ def plot_number_of_events():
 
     curs = conn.cursor()
     curs.execute(query)
+
     df_ts = pd.DataFrame(curs, columns=[item[0] for item in curs.description])
 
     fig = px.bar(df_ts, x="convertedTimeSecond", y="sum_value")
-    fig.update_yaxes(range=[0, 50])
+    fig.update_layout(
+        xaxis_title="Time",
+        yaxis_title="Total events",
+        yaxis_range=[0, 50],
+    )
     st.plotly_chart(fig, use_container_width=True)
 
 
