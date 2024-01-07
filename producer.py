@@ -6,10 +6,16 @@ import socket
 import json
 
 import uuid
+import sys
 
 conf = {"bootstrap.servers": "localhost:9092", "client.id": socket.gethostname()}
 
 producer = Producer(conf)
+
+try:
+    SLEEP_TIME = int(sys.argv[1])
+except IndexError as e:
+    SLEEP_TIME = 0.1
 
 TOPIC = "fakeevents"
 
@@ -34,4 +40,4 @@ while True:
         value=payload,
         callback=acked,
     )
-    time.sleep(0.1)
+    time.sleep(SLEEP_TIME)
