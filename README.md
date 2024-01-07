@@ -34,3 +34,4 @@ streamlit run streamlit/app.py
 
 Navigate to localhost:8501 to view dashboard. Navigate to localhost:9001 to view Pinot controller.
 
+Based on: <https://github.com/mneedham/pinot-wiki>
