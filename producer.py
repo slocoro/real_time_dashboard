@@ -35,8 +35,7 @@ while True:
     print(payload)
     producer.produce(
         TOPIC,
-        #  key="key",
-        #  value=data.to_bytes(2, byteorder='big', signed=True),
+        key="key",
         value=payload,
         callback=acked,
     )
